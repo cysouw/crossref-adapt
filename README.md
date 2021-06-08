@@ -10,16 +10,16 @@ Michael Cysouw <cysouw@mac.com>
 
 The effect of `crossref-adapt` is that the internal IDs are harmonized with the IDs as they are type-set in the final text. In this way it is possible to use these IDs to transparently refer to each individual item. For example, in the [HTML-version](https://cysouw.github.io/crossref-adapt/README.html) of this README this section is numbered as Section 2. By adding the [fragment-identifier](https://en.wikipedia.org/wiki/URI_fragment) `#sec2` to the URL a direct link to this section is made (e.g. [cysouw.github.io/crossref-adapt/README.html#sec2](https://cysouw.github.io/crossref-adapt/README.html#sec2)).
 
-This functionality is intended for stable (scientific) publications on the open web. Instead of circuitous and cumbersome current practice of page numbering inside of PDFs, this allows for direct scientific cross-references to specific element of a scientific work, e.g. (Cysouw 2021: [#sec2.5](https://cysouw.github.io/diathesis/#sec2.5)). 
+This functionality is intended for stable (scientific) publications on the open web. Instead of circuitous and cumbersome current practice of page numbering inside of PDFs, this allows for direct scientific cross-references to specific element of a scientific work, e.g. (Cysouw 2021: [#sec2.5](https://cysouw.github.io/diathesis/fulltext.html#sec2.5)). 
 
 # Cross-referencing
 
 Currently, the IDs as produced by this filter can be referred to as follows:
 
 - **`#sec2`** for numbered sections
-- **`#tbl1`** for numbered tables
-- **`#fig1`** for numbered figures
-- **`#eq1`** for numbered equations
+- **`#tbl2`** for numbered tables
+- **`#fig3`** for numbered figures
+- **`#eq4`** for numbered equations
 
 The format is deliberately somewhat cryptic and short, but easy to type and parse. The hash is the URL-standard for fragments. The numbers are the actual numbers as produced in the final output. No punctuation is added inside these IDs to make automatic parsing easier.
 
@@ -27,7 +27,7 @@ The format is harmonized with the IDs for footnotes as produces natively by Pand
 
 - **`#fn3`** for [Pandoc footnotes](https://pandoc.org/MANUAL.html#footnotes)
 - **`#ex7`** for examples as produced by [`pandoc-ling`](https://github.com/cysouw/pandoc-ling)
-- **`#7`** for paragraph numbers as produced by [`count-para`](https://github.com/cysouw/count-para)
+- **`#8`** for paragraph numbers as produced by [`count-para`](https://github.com/cysouw/count-para)
 
 # Usage
 

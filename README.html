@@ -152,30 +152,30 @@
 <header id="title-block-header">
 <h1 class="title">Introducing crossref-adapt</h1>
 </header>
-<h1 data-number="1" label="1" id="sec1"><span class="header-section-number">1</span> crossref-adapt</h1>
+<h1 data-number="1" id="crossref-adapt"><span class="header-section-number">1</span> crossref-adapt</h1>
 <p>A Pandoc-Lua Filter to change the internal IDs for cross-references as produced by <code>pandoc-crossref</code>.</p>
-<p>Michael Cysouw <a href="#cysouw@mac.com" class="email">cysouw@mac.com</a></p>
-<h1 data-number="2" label="2" id="sec2"><span class="header-section-number">2</span> Rationale</h1>
-<p><a href="#Pandoc">Pandoc</a> is a system for converting between different markup formats. The <a href="#pandoc-crossref"><code>pandoc-crossref</code></a> filter (extensions to Pandoc are called ‘filter’ in Pandoc-parlance) allows for easy and flexible internal cross-reference to sections, figures, tables and equations. The current <code>crossref-adapt</code> filter adds a cosmetic change to the IDs of these cross-references.</p>
-<p>The effect of <code>crossref-adapt</code> is that the internal IDs are harmonized with the IDs as they are type-set in the final text. In this way it is possible to use these IDs to transparently refer to each individual item. For example, in the <a href="#HTML-version">HTML-version</a> of this README this section is numbered as Section 2. By adding the <a href="#fragment-identifier">fragment-identifier</a> <code>#sec2</code> to the URL a direct link to this section is made (e.g. <a href="#cysouw.github.io/crossref-adapt/readme.html#sec2">cysouw.github.io/crossref-adapt/readme.html#sec2</a>).</p>
-<p>This functionality is intended for stable (scientific) publications on the open web. Instead of circuitous and cumbersome current practice of page numbering inside of PDFs, this allows for direct scientific cross-references to specific element of a scientific work, e.g. (Cysouw 2021: <a href="##sec2.5">#sec2.5</a>).</p>
-<h1 data-number="3" label="3" id="sec3"><span class="header-section-number">3</span> Cross-referencing</h1>
+<p>Michael Cysouw <a href="mailto:cysouw@mac.com" class="email">cysouw@mac.com</a></p>
+<h1 data-number="2" id="rationale"><span class="header-section-number">2</span> Rationale</h1>
+<p><a href="https:pandoc.org">Pandoc</a> is a system for converting between different markup formats. The <a href="https://github.com/lierdakil/pandoc-crossref"><code>pandoc-crossref</code></a> filter (extensions to Pandoc are called ‘filter’ in Pandoc-parlance) allows for easy and flexible internal cross-reference to sections, figures, tables and equations. The current <code>crossref-adapt</code> filter adds a cosmetic change to the IDs of these cross-references.</p>
+<p>The effect of <code>crossref-adapt</code> is that the internal IDs are harmonized with the IDs as they are type-set in the final text. In this way it is possible to use these IDs to transparently refer to each individual item. For example, in the <a href="https://cysouw.github.io/crossref-adapt/README.html">HTML-version</a> of this README this section is numbered as Section 2. By adding the <a href="https://en.wikipedia.org/wiki/URI_fragment">fragment-identifier</a> <code>#sec2</code> to the URL a direct link to this section is made (e.g. <a href="https://cysouw.github.io/crossref-adapt/README.html#sec2">cysouw.github.io/crossref-adapt/README.html#sec2</a>).</p>
+<p>This functionality is intended for stable (scientific) publications on the open web. Instead of circuitous and cumbersome current practice of page numbering inside of PDFs, this allows for direct scientific cross-references to specific element of a scientific work, e.g. (Cysouw 2021: <a href="https://cysouw.github.io/diathesis/fulltext.html#sec2.5">#sec2.5</a>).</p>
+<h1 data-number="3" id="cross-referencing"><span class="header-section-number">3</span> Cross-referencing</h1>
 <p>Currently, the IDs as produced by this filter can be referred to as follows:</p>
 <ul>
 <li><strong><code>#sec2</code></strong> for numbered sections</li>
-<li><strong><code>#tbl1</code></strong> for numbered tables</li>
-<li><strong><code>#fig1</code></strong> for numbered figures</li>
-<li><strong><code>#eq1</code></strong> for numbered equations</li>
+<li><strong><code>#tbl2</code></strong> for numbered tables</li>
+<li><strong><code>#fig3</code></strong> for numbered figures</li>
+<li><strong><code>#eq4</code></strong> for numbered equations</li>
 </ul>
 <p>The format is deliberately somewhat cryptic and short, but easy to type and parse. The hash is the URL-standard for fragments. The numbers are the actual numbers as produced in the final output. No punctuation is added inside these IDs to make automatic parsing easier.</p>
 <p>The format is harmonized with the IDs for footnotes as produces natively by Pandoc, with linguistic examples as produced by the Pandoc-filter <code>pandoc-ling</code> and with paragraph numbers as added to Pandoc with the filter <code>count-para</code>:</p>
 <ul>
-<li><strong><code>#fn3</code></strong> for <a href="#Pandoc footnotes">Pandoc footnotes</a></li>
-<li><strong><code>#ex7</code></strong> for examples as produced by <a href="#pandoc-ling"><code>pandoc-ling</code></a></li>
-<li><strong><code>#7</code></strong> for paragraph numbers as produced by <a href="#count-para"><code>count-para</code></a></li>
+<li><strong><code>#fn3</code></strong> for <a href="https://pandoc.org/MANUAL.html#footnotes">Pandoc footnotes</a></li>
+<li><strong><code>#ex7</code></strong> for examples as produced by <a href="https://github.com/cysouw/pandoc-ling"><code>pandoc-ling</code></a></li>
+<li><strong><code>#8</code></strong> for paragraph numbers as produced by <a href="https://github.com/cysouw/count-para"><code>count-para</code></a></li>
 </ul>
-<h1 data-number="4" label="4" id="sec4"><span class="header-section-number">4</span> Usage</h1>
-<p>As an example, this <code>readme</code> is converted into HTML with the following Pandoc command. It can be directly accessed at <a href="#cysouw.github.io/crossref-adapt">cysouw.github.io/crossref-adapt</a>.</p>
+<h1 data-number="4" id="usage"><span class="header-section-number">4</span> Usage</h1>
+<p>As an example, this <code>readme</code> is converted into HTML with the following Pandoc command. It can be directly accessed at <a href="https://cysouw.github.io/crossref-adapt/readme.html">cysouw.github.io/crossref-adapt</a>.</p>
 <pre><code>pandoc README.md \
     --to html \
     --output README.html \
